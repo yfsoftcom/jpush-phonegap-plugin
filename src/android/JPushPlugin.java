@@ -19,7 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.Map.Entry;
 
-import your.package.name.R;
+import biz.gr100.app.expapp.R;
 
 import cn.jpush.android.api.BasicPushNotificationBuilder;
 import cn.jpush.android.api.CustomPushNotificationBuilder;
