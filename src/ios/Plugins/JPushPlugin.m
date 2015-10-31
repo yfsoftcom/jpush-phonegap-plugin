@@ -316,7 +316,7 @@ static NSDictionary *_luanchOptions=nil;
         case UIApplicationStateActive:
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.commandDelegate evalJs:[NSString stringWithFormat:@"cordova.fireDocumentEvent('jpush.receiveNotification',%@)",jsonString]];
+                    [self.commandDelegate evalJs:[NSString stringWithFormat:@"plugins.jPushPlugin.openNotificationIniOSCallback(%@);",jsonString]];
                 });
 
             }
@@ -325,7 +325,7 @@ static NSDictionary *_luanchOptions=nil;
         case UIApplicationStateBackground:
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.commandDelegate evalJs:[NSString stringWithFormat:@"cordova.fireDocumentEvent('jpush.openNotification',%@)",jsonString]];
+                    [self.commandDelegate evalJs:[NSString stringWithFormat:@"plugins.jPushPlugin.openNotificationIniOSCallback(%@);",jsonString]];
                 });
                 
             }
